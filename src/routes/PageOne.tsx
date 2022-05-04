@@ -16,10 +16,10 @@ const PageOne = () => {
         {invoices.map((invoice: any) => (
           <Link
             style={{ display: "block", margin: "1rem 0" }}
-            to={`/invoices/${invoice.number}`}
+            to={`/one/${invoice.number}`}
             key={invoice.number}
           >
-            {invoice.name}
+            {invoice.name} has to pay {invoice.amount} before {invoice.due}
           </Link>
         ))}
       </nav>
