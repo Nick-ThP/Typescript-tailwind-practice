@@ -1,8 +1,16 @@
+import { Link, Outlet } from "react-router-dom";
+
 function App() {
   return (
-    <h1 className="text-3xl font-bold underline text-red-600">
-      Here we gooo
-    </h1>
+    <div>
+      <h1>Bookkeeper</h1>
+      <nav className="border-4 border-teal-600 bg-teal-400 p-8 inline-block delay-100">
+        <Link to="/one">Page one</Link> |{" "}
+        <Link to="/two">Page two</Link> |{" "}
+        <Link to="/three">Page three</Link>
+      </nav>
+      <Outlet />
+    </div>
   );
 }
 
